@@ -1,0 +1,255 @@
+.geçiş {
+    height: 400px;
+    /* linear-gradient(yön,renk1,renk2)  */
+  }
+  .geçiş1 {
+    background-image: linear-gradient(red, yellow);
+  }
+  .geçiş2 {
+    background-image: linear-gradient(to right, red, yellow);
+  }
+  .geçiş3 {
+    background-image: linear-gradient(to left, pink, purple, crimson);
+  }
+  .geçiş4 {
+    background-image: linear-gradient(to top, pink, purple);
+  }
+  .geçiş5 {
+    background-image: linear-gradient(
+      120deg,
+      yellow,
+      red,
+      rgba(0, 128, 0),
+      blue,
+      orange
+    );
+  }
+  
+  .geçiş6 {
+    background: linear-gradient(90deg, yellow 60%, red 100%);
+  }
+  
+  /* radial gradient */
+  
+  .geçiş7 {
+    background: radial-gradient(red, yellow);
+  }
+  
+  .geçiş8 {
+    background: radial-gradient(red 30%, yellow 30%);
+  }
+  
+  .geçiş9 {
+    background: radial-gradient(circle, pink 30%, purple 60%);
+  }
+  
+  .geçiş10 {
+    background: radial-gradient(ellipse, pink 30%, purple 60%);
+  }
+  
+  /* arkaplan */
+  .geçiş11 {
+    background: linear-gradient(
+        rgba(255, 0, 0, 0.395),
+        rgba(255, 255, 255, 0.307)
+      ),
+      url(banner2.jpg);
+    background-position: center;
+    background-size: cover;
+  }
+  
+  /* filtrleme */
+  
+  img {
+    width: 100px;
+  }
+  
+  .res1 {
+    filter: blur(5px);
+  }
+  
+  .res2 {
+    filter: contrast(150%);
+  }
+  
+  .res3 {
+    filter: grayscale(90%);
+  }
+  
+  .res4 {
+    filter: hue-rotate(160deg);
+  }
+  
+  .res5 {
+    filter: drop-shadow(-16px -16px 20px red) invert(75%);
+  }
+  
+  /* GRID YAPISI */
+  
+  .kapsayici {
+    height: 200px;
+    border: 3px solid;
+  }
+  
+  .eleman {
+    background-color: crimson;
+  }
+  
+  .kap1 {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: auto auto;
+  }
+  
+  .kap2 {
+    height: 500px;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: 30% 10% auto;
+  }
+  
+  .kap3 {
+    height: unset;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 50px;
+    /* satır yüksekliği */
+    grid-template-rows: 100px 200px 50px;
+  }
+  
+  .kap4 {
+    display: grid;
+    grid-template-columns: repeat(3, auto) 50px;
+    gap: 50px;
+  }
+  
+  .kap5 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: 50px;
+  }
+  
+  .kap6 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 50px;
+  }
+  
+  .kap7 {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 30px;
+  }
+  
+  .el1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+  .el4 {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+  
+  .el5 {
+    /* 1.yöntem */
+    /* 
+    grid-column-start: 1;
+    grid-column-end: 5;
+     */
+    /* 2.yöntem */
+    grid-column: 1 / 4;
+  }
+  
+  .kap8 {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+  }
+  .ele1 {
+    grid-row: span 3;
+    grid-column: span 2;
+  }
+  
+  /* hizalama */
+  /* .eleman {
+    width: 100px;
+    height: 50px;
+  } */
+  
+  .kap9 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  .kap10 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    justify-content: space-around;
+  }
+  .kap11 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    justify-content: space-evenly;
+  }
+  .kap12 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  /* align iitems */
+  .kap14 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-content: start;
+  }
+  .kap15 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-content: center;
+  }
+  .kapsayici {
+    height: 500px;
+  }
+  /* 1rem = 16px */
+  .kap16 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: start;
+    font-size: 1.3rem;
+  }
+  
+  .kap17 {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: start;
+  }
+  
+  .kap18 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+  }
+  
+  .kap19 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: end;
+  }
+  
+  /* fr */
+  .kap20 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    place-items: center;
+  }
+  
+  .eleman {
+    width: 100px;
+    height: 100px;
+  }
